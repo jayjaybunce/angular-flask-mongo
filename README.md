@@ -4,8 +4,9 @@ A template for building apps with an Angular frontend and a Flask / python backe
 
 Shell Commands to get started
 
--- First make sure your update
-  <code> sudo apt-get install git </code>
+First make sure your update
+<code> sudo apt-get install git </code>
+
 1. clone this repo
 
 2. install all the necessary packages (best done inside of a virtual environment)
