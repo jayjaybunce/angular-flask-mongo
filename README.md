@@ -1,10 +1,11 @@
-<<<<<<< HEAD
-# AngularJS + Flask Boilerplate App
+# AngularJS + Flask + MongoEngine Boilerplate App
 
-A template for building apps with an Angular frontend and a Flask / python backend.
+A template for building apps with an Angular frontend and a Flask / python backend and mongodb.
 
-### How to Get Started
+Shell Commands to get started
 
+-- First make sure your update
+  <code> sudo apt-get install git </code>
 1. clone this repo
 
 2. install all the necessary packages (best done inside of a virtual environment)
@@ -23,4 +24,4 @@ A template for building apps with an Angular frontend and a Flask / python backe
 =======
 angular-flask-mongo
 ===================
->>>>>>> a2ee804f66c2a1d29a08fe12e68499938dfcb796
+
