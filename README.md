@@ -1,2 +1,0 @@
-angular-flask-mongo
-===================
