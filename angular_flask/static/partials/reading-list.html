@@ -1,0 +1,5 @@
+
+<div ng-repeat="reading in readings | orderBy: 'id':true ">
+	<h4><a href="/reading/{{ reading.id }}">{{ reading.note }}</a></h4>
+	<p>{{ reading.note }}<p>
+</div>
