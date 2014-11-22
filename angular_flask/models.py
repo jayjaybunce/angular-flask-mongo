@@ -1,8 +1,10 @@
 import datetime
+import uuid
 
 from angular_flask.core import db
 from angular_flask import app
 from angular_flask.core import mongo_db
+
 
 class Post2(mongo_db.Document):
 	created_at = mongo_db.DateTimeField(default=datetime.datetime.now, required=True)
@@ -28,6 +30,15 @@ class User(mongo_db.Document):
 	fname = mongo_db.StringField(max_length=64, required=True)
 	lname = mongo_db.StringField(max_length=64, required=True)
 	email = mongo_db.StringField(max_length=255, required=True)
+	fb_id = mongo_db.IntField()
+	
+class UserSession(mongo_db.Document):
+	exp_time =  datetime.datetime.now() + datetime.timedelta(minutes=60)
+	sid = mongo_db.StringField(primary_key=True, default=str(uuid.uuid4()))
+	created_at = mongo_db.DateTimeField(default=datetime.datetime.now)
+	user_id = mongo_db.StringField(max_length=24, required=True)
+	expiration = mongo_db.DateTimeField(default=exp_time)	
+	
 	
 class Glucose(mongo_db.Document):
 	created_at = mongo_db.DateTimeField(default=datetime.datetime.now, required=True)
@@ -61,7 +72,7 @@ class Events(mongo_db.Document):
 	
 
 # models for which we want to create API endpoints
-app.config['API_MODELS'] = { 'user': User, 'Glucose': Glucose,'meal': Meal, 'event': Event }
+app.config['API_MODELS'] = { 'user': User,'user_session': UserSession, 'Glucose': Glucose,'meal': Meal, 'event': Event }
 
 # models for which we want to create CRUD-style URL endpoints,
 # and pass the routing onto our AngularJS application

@@ -68,16 +68,8 @@ font-family: 'Source Sans Pro', sans-serif;
 
 .navbar-brand
 {
-	background-image: url('/static/img/data-logo.png') !important;
-	background-size: 50px;
-	background-repeat: no-repeat;
-	margin-top: 5px;
-	
-	width: 150px;
-	height: 60px;
 	color: white;
 }
-
 .navbar
 {
 	background-color: #608CC3;
@@ -314,3 +306,132 @@ width: 100%;
 
 .section.section-hilite{background:#eee}
 .section .section-title{margin:0 0 30px;text-align:center;position:relative}
+
+
+@keyframes spin{
+  0%{transform:rotate(0deg);}
+  100%{transform:rotate(360deg);}
+}
+body{
+  background-color:lightgrey;
+}
+
+
+.home-posts li{
+	position: relative;
+	display: block;
+	float: left;
+	vertical-align: top;
+	background: #fff;
+	border: solid 2px #fff;
+	border-radius: 8px;
+	list-style-type: none;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	width: 230px;
+	height: 365px;
+	overflow: hidden;
+-webkit-box-shadow: 2px 3px 9px 0px rgba(50, 50, 50, 1);
+-moz-box-shadow:    2px 3px 9px 0px rgba(50, 50, 50, 1);
+box-shadow:         2px 3px 9px 0px rgba(50, 50, 50, 1);
+}
+
+.home-posts li .post-title{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	background: #fff;
+	height: 90px;
+	padding: 5px 0px;
+}
+.home-posts h3{
+	line-height: 15px;
+}
+.home-posts h3 a{
+	color: #3987ad;
+	font-family: 'Arial';
+	font-size: 15px;
+	letter-spacing: 0px;
+	font-weight:700;
+	
+}
+.home-posts li.featured{
+	width: 483px;
+
+}
+.home-posts li .post-date{
+	font-style: normal;
+	font-family: 'Arial';
+	font-size: 12px;
+	color: #808080;
+	
+}
+
+.home-posts .post-author{
+	background: #3987ad;
+	height: 35px;
+	width: 100%;
+	position: absolute;
+	bottom: 100px;
+	color: #fff;
+	padding-top: 9px;
+	font-size: 12px;
+	text-align: center;
+	
+}
+
+.home-posts .post-author a{
+	color: #fff;
+	text-decoration: none;
+}
+.home-posts .post-inner{
+	padding: 0px 15px;
+}
+
+.home-sidebar{
+	float: right;
+	vertical-align: top;
+	padding-top: 40px;
+	
+}
+.home-sidebar img{
+	max-width: 100%;
+}
+.home-sidebar > div{
+	width: 155px;
+	padding: 15px;
+	background: #fff;
+	min-height: 150px;
+	border: solid 1px #fff;
+	border-radius: 8px;
+	
+}
+.home-sidebar > div p{
+	margin-bottom: 5px;
+}
+
+
+.circle-avatar{
+	
+	overflow: hidden;
+	border: solid 3px #fff;
+	position: absolute;
+	left: 0px;
+	top: -10px;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+}
+
+.circle-avatar img{
+	width: 40px;
+}
+
+.post-pic{
+
+	overflow: hidden;
+	height: 230px;
+}
+.post-pic img{
+	width: 100%;
+}

@@ -8,7 +8,7 @@ angular.module('AngularFlask', ['angularFlaskServices'])
 			templateUrl: 'static/partials/landing.html',
 			controller: IndexController
 		})
-		.when('/about', {
+		.when('/me', {
 			templateUrl: 'static/partials/about.html',
 			controller: AboutController
 		})
