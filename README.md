@@ -9,7 +9,11 @@ First make sure your update
 
 <code>sudo apt-get install git</code>
 
-<code>sudo </code>
+<code>pip install pymongo</code>
+
+<code>pip install mongoengine</code>
+
+<code>pip install flask-mongoengine</code>
 
 1. clone this repo
 
