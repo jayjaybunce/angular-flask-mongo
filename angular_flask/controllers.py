@@ -17,12 +17,11 @@ from angular_flask.models import *
 #	model_class = app.config['API_MODELS'][model_name]
 #	api_manager.create_api(model_class, methods=['GET', 'POST'])
 
-app.config["MONGODB_SETTINGS"] = {'DB': "project1"}
 app.config["SECRET_KEY"] = "KeepThisS3cr3t"
 
 # routing for basic pages (pass routing onto the Angular app)
 @app.route('/')
-
+	
 def basic_pages(**kwargs):
 	return make_response(open('angular_flask/templates/index.html').read())
 
