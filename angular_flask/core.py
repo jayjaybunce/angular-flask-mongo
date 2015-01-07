@@ -5,7 +5,7 @@ from angular_flask import app
 from flask.ext.restless import APIManager
 from flask.ext.mongoengine import MongoEngine
 
-app.config['MONGOLAB_URI'] = os.environ.get('MONGOLAB_URI')
+app.config['MONGODB_HOST'] = os.environ.get('MONGOLAB_URI')
 
 mongo_db = MongoEngine(app)
 
