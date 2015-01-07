@@ -2,18 +2,10 @@
 
 A template for building apps with an Angular frontend and a Flask / python backend and mongodb.
 
-Shell Commands to get started
-
-First make sure your update
+First make sure your updated
 <code>sudo apt-get update</code>
 
 <code>sudo apt-get install git</code>
-
-<code>pip install pymongo</code>
-
-<code>pip install mongoengine</code>
-
-<code>pip install flask-mongoengine</code>
 
 1. clone this repo
 
@@ -23,13 +15,9 @@ First make sure your update
 3. run the app
 > python runserver.py
 
-4. create and seed the db (the server must still be running, so open a new terminal window first)
-> python manage.py create_db && python manage.py seed_db --seedfile 'data/db_items.json'
-
-5. check out your blog
+4. check out your app
 > http://localhost:5000/blog
 
-6. if you like this project, give it a star :)
 =======
 angular-flask-mongo
 ===================
