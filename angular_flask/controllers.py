@@ -23,7 +23,7 @@ app.config["SECRET_KEY"] = "KeepThisS3cr3t"
 @app.route('/')
 	
 def basic_pages(**kwargs):
-	return make_response(open('angular_flask/ux/app/index.html').read())
+	return make_response(open('angular_flask/static/index.html').read())
 
 oauth = OAuth()
 
@@ -103,7 +103,7 @@ def dashboard(**kwargs):
     	time = datetime.datetime.now()
     	
     	if user_session.expiration  > time:
-    		return make_response(open('angular_flask/ux/app/index.html').read())
+    		return make_response(open('angular_flask/static/index.html').read())
     	else:
     		return redirect('login')
     	
@@ -137,9 +137,9 @@ def rest_pages(collection,document_id=None):
 	if collection in crud_url_models:
 		model_class = crud_url_models[collection]
 		if document_id is None:
-			return make_response(open('angular_flask/ux/app/index.html').read())	
+			return make_response(open('angular_flask/static/index.html').read())	
 		elif get_doc_id(model_class,document_id):
-			return make_response(open('angular_flask/ux/app/index.html').read())								
+			return make_response(open('angular_flask/static/index.html').read())								
 	abort(404)
 
 @app.route('/api/<collection>', methods=['GET','POST','DELETE'])
