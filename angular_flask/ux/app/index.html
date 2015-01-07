@@ -32,55 +32,14 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/index.js"></script>
     <!-- Controllers -->
-    <script src="scripts/controllers/menu.js"></script>
-
-    <!-- Controllers: Modal -->
-    <script src="scripts/controllers/modal/add-address.js"></script>
-
-    <!-- Directives -->
-    <script src="scripts/directives/fileModel.js"></script>
-
-    <!-- Factories -->
-    <script src="scripts/factories/address.js"></script>
-
-    <!-- Filters -->
-    <script src="scripts/filters/decimalPlaces.js"></script>
-
-    <!-- Services -->
-    <script src="scripts/services/"></script>
+    <script src="scripts/controllers/index.js"></script>
 
     <!-- endbuild -->
-
-    <!-- Lodash mixins -->
-    <script>
-      _.mixin(_.str.exports());
-    </script>
-    <!-- End Lodash mixins -->
 
   </head>
 
   <body>
-    <div ng-include="'views/nav/top.html'"></div>
-
-    <div class="container-fluid btc-dash-area no-print">
-      <!-- Overlays for No-Purchase, No-Withdraw, etc. -->
-      <div ng-include="'views/overlay.html'"></div>
-
-      <div class="row btc-main-wrapper" ng-class="{'no-scroll': noScrollingMain}">
-        <div ng-include="'views/nav/sidebar.html'"></div>
-
-        <div class="col-lg-10 col-md-10 col-sm-12 main">
-          <div ng-show="banner" class="alert alert-info">
-            <button type="button" class="close" ng-click="banner=false">&times;</button>
-            <i class="fa fa-warning"></i> <strong ng-bind="banner"></strong>
-          </div>
-
-          <div ng-view></div>
-          <div ng-include="'views/footer.html'"></div>
-        </div>
-      </div>
-    </div>
-
+  	<div ng-view></div>
   </body>
 
 </html>
