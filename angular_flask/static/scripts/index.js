@@ -30,8 +30,7 @@ app.run([
   "$location",
   "$interval",
   "$timeout",
-  "OrderService",
-  function($rootScope, $http, $location, $interval, $timeout, OrderService){
+  function($rootScope, $http, $location, $interval, $timeout){
 
   }
 ]);
