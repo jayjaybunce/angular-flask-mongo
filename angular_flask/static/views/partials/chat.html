@@ -1,0 +1,10 @@
+<div ng-controller="IndexController">
+	<ul>
+		<li ng-repeat="msg in chat.messages">{{msg.text}}</li>
+	</ul>
+	<textarea ng-model="message">
+	</textarea>
+	<button ng-click="submitMessage()">
+		Submit Message
+	</button>
+</div>

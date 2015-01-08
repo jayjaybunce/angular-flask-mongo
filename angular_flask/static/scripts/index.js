@@ -13,8 +13,8 @@ app.config([
 	
 	function($routeProvider, $locationProvider) {
 	$routeProvider
-		.when('/', {
-			templateUrl: 'static/partials/start.html',
+		.when('/chat', {
+			templateUrl: 'static/views/partials/chat.html',
 			controller: "IndexController"
 		})
 		.otherwise({
