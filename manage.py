@@ -5,12 +5,6 @@ import requests
 
 from angular_flask.core import db
 from angular_flask.models import Post
-
-
-def create_sample_db_entry(api_endpoint, payload):
-	url = 'http://104.131.15.90:80/' + api_endpoint
-	r = requests.post(url, data=json.dumps(payload), headers={'Content-Type': 'application/json'})
-	print r.text
 	
 def create_db():
 	db.create_all()
