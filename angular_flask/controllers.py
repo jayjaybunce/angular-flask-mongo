@@ -21,7 +21,7 @@ app.config["SECRET_KEY"] = "KeepThisS3cr3t"
 
 # routing for basic pages (pass routing onto the Angular app)
 @app.route('/')
-	
+@app.route('/chat')	
 def basic_pages(**kwargs):
 	return make_response(open('angular_flask/static/index.html').read())
 
